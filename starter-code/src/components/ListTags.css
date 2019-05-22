@@ -1,0 +1,5 @@
+.list-tag {
+  display: flex;
+  justify-content: space-between;
+  margin: 2vw;
+}
