@@ -3,11 +3,11 @@ import "./ListTags.css";
 
 function ListTags() {
   return (
-    <div className="list-tag">
-      <h1>Picture</h1>
-      <h1>Name</h1>
-      <h1>Popularity</h1>
-    </div>
+    <tr>
+      <th>Picture</th>
+      <th>Name</th>
+      <th>Popularity</th>
+    </tr>
   );
 }
 

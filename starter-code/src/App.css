@@ -1,7 +1,9 @@
 .App {
-  display: flex;
-  flex-direction: column;
   margin: 0 10vw;
+}
+
+th tr {
+  width: 30%;
 }
 
 .btn-container {

@@ -58,16 +58,16 @@ class App extends React.Component {
       );
     });
     return (
-      <div className="App">
-        <ListTags />
+      <table className="App">
         <div className="btn-container">
           <button onClick={this.handleRandomContact}>Add random contact</button>
           <button onClick={this.handleNameSort}>Sort by name</button>
           <button onClick={this.handlePopSort}>Sort by popularity</button>
           <button onClick={this.handleReset}>Reset</button>
         </div>
+        <ListTags />
         {contactJSX}
-      </div>
+      </table>
     );
   }
 }
