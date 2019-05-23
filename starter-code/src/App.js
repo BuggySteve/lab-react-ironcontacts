@@ -12,13 +12,11 @@ class App extends React.Component {
   };
 
   getRandomIndexNumber = () => {
-    debugger;
     let randomIndex = Math.floor(Math.random() * contacts.length);
     return randomIndex;
   };
 
   handleRandomContact = () => {
-    debugger;
     let randomContact = contacts[this.getRandomIndexNumber()];
     let contactAdded = [...this.state.contacts];
     contactAdded.unshift(randomContact);
@@ -47,26 +45,38 @@ class App extends React.Component {
     this.setState({ contacts: defaultContacts });
   };
 
+  deleteContact = indexNum => {
+    let newContactList = [...this.state.contacts];
+    newContactList.splice(indexNum, 1);
+    this.setState({ contacts: newContactList });
+  };
+
   render() {
-    let contactJSX = this.state.contacts.map(contact => {
+    let contactJSX = this.state.contacts.map((contact, index) => {
       return (
         <ContactCard
           pictureUrl={contact.pictureUrl}
           name={contact.name}
           popularity={contact.popularity}
+          index={index.toString()}
+          deleteContact={this.deleteContact}
         />
       );
     });
     return (
       <table className="App">
-        <div className="btn-container">
-          <button onClick={this.handleRandomContact}>Add random contact</button>
-          <button onClick={this.handleNameSort}>Sort by name</button>
-          <button onClick={this.handlePopSort}>Sort by popularity</button>
-          <button onClick={this.handleReset}>Reset</button>
-        </div>
-        <ListTags />
-        {contactJSX}
+        <tbody>
+          <div className="btn-container">
+            <button onClick={this.handleRandomContact}>
+              Add random contact
+            </button>
+            <button onClick={this.handleNameSort}>Sort by name</button>
+            <button onClick={this.handlePopSort}>Sort by popularity</button>
+            <button onClick={this.handleReset}>Reset</button>
+          </div>
+          <ListTags />
+          {contactJSX}
+        </tbody>
       </table>
     );
   }
