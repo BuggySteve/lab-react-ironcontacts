@@ -1,3 +1,26 @@
 tr td img {
   width: 25%;
 }
+
+.btn-delete {
+  position: relative;
+  background: red;
+  padding: 1vw;
+  border: 1px solid rgb(180, 14, 14);
+  cursor: pointer;
+  margin-left: 5vw;
+  border-radius: 10px;
+  height: 40px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-delete:focus,
+.btn-delete:hover {
+  background: rgb(158, 12, 12);
+}
+
+.btn-delete:active {
+  top: 2px;
+  box-shadow: none;
+}

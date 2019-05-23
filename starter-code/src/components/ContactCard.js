@@ -14,7 +14,12 @@ function ContactCard(props) {
         <h3>{props.popularity}</h3>
       </td>
       <td>
-        <button onClick={() => props.deleteContact(props.index)}>Delete</button>
+        <button
+          className="btn-delete"
+          onClick={() => props.deleteContact(props.index)}
+        >
+          Delete
+        </button>
       </td>
     </tr>
   );

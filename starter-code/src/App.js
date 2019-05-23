@@ -64,20 +64,20 @@ class App extends React.Component {
       );
     });
     return (
-      <table className="App">
-        <tbody>
-          <div className="btn-container">
-            <button onClick={this.handleRandomContact}>
-              Add random contact
-            </button>
-            <button onClick={this.handleNameSort}>Sort by name</button>
-            <button onClick={this.handlePopSort}>Sort by popularity</button>
-            <button onClick={this.handleReset}>Reset</button>
-          </div>
-          <ListTags />
-          {contactJSX}
-        </tbody>
-      </table>
+      <div>
+        <div className="btn-container">
+          <button onClick={this.handleRandomContact}>Add random contact</button>
+          <button onClick={this.handleNameSort}>Sort by name</button>
+          <button onClick={this.handlePopSort}>Sort by popularity</button>
+          <button onClick={this.handleReset}>Reset</button>
+        </div>
+        <table className="App">
+          <tbody>
+            <ListTags />
+            {contactJSX}
+          </tbody>
+        </table>
+      </div>
     );
   }
 }

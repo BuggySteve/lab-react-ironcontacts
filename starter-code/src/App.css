@@ -8,13 +8,28 @@ th tr {
 
 .btn-container {
   display: flex;
+  justify-content: center;
+  margin-bottom: 5vh;
 }
 
 .btn-container button {
+  position: relative;
   margin: 1vw;
   padding: 1vw;
   background: green;
   color: #fff;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 10px;
+  box-shadow: 0 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+  height: 40px;
+}
+
+.btn-container button:hover {
+  background: rgb(3, 80, 3);
+}
+
+.btn-container button:active {
+  top: 2px;
+  box-shadow: none;
 }

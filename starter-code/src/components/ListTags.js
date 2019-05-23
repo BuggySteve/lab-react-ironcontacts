@@ -3,8 +3,8 @@ import "./ListTags.css";
 
 function ListTags() {
   return (
-    <tr>
-      <th>Picture</th>
+    <tr className="list-tags">
+      <th id="picture">Picture</th>
       <th>Name</th>
       <th>Popularity</th>
     </tr>
